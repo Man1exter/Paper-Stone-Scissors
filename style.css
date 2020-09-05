@@ -6,7 +6,7 @@
 .elements{
     width: 500px;
     height: 250px;
-    margin: -33px 0px 0px 37%;
+    margin: -33px 0px 0px 36.6%;
 }
 .rect{
     text-align: center;
@@ -14,4 +14,15 @@
     height: 50px;
     line-height: 50px;
     font-size: 40px;
+    position: absolute;
+    width: 100%;
+    top: 19.8%;
+    border-top: 5px solid orange;
+    border-bottom: 5px solid orange;
+    transition: .3s linear;
+}
+.rect:hover{
+    border-top: 5px solid green;
+    background-color: orange;
+    border-bottom: 5px solid green;
 }
