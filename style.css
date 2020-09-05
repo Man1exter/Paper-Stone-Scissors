@@ -26,3 +26,16 @@
     background-color: orange;
     border-bottom: 5px solid green;
 }
+.images{
+    display: flex;
+    cursor: pointer;
+    flex-grow: 1;
+    justify-content: space-around;
+    background-color: #fff;
+}
+.stone,
+.scissors,
+.paper{
+    margin: 60px 0px 40px 0px;
+    
+}
