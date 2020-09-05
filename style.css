@@ -29,7 +29,6 @@
 .images{
     display: flex;
     cursor: pointer;
-    flex-grow: 1;
     justify-content: space-around;
 }
 .stone,
@@ -37,7 +36,7 @@
 .paper{
     margin: 50px 0px 20px 0px;
     border: 5px solid blue;
-    background-color: white;
+    background-color: rgb(141, 139, 139);
     border-radius: 7.5px;
     transition: .2s linear;
     box-shadow: 6px 3px 23px 30px rgba(0,255,242,0.35);
@@ -45,8 +44,23 @@
 .stone:hover,
 .scissors:hover,
 .paper:hover{
-    background-color: rgb(196, 193, 193);
+    background-color: white;
     border: 5px solid rgb(22, 22, 177);
     margin: 50px 0px 20px 0px;
     box-shadow: 6px 3px 23px 30px rgb(1, 253, 241);
+}
+.fight{
+    font-size: 40px;
+    text-align: center;
+    margin: 30px 0px 0px 46%;
+    cursor: pointer;
+    border: 5px solid orange;
+    border-radius: 8px;
+    background-color:yellow;
+    padding: 15px;
+    transition: .3s linear;
+}
+.fight:hover{
+    border: 5px solid yellow;
+    background-color:rgba(255, 102, 0, 0.945);
 }
