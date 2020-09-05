@@ -35,15 +35,18 @@
 .stone,
 .scissors,
 .paper{
-    margin: 40px 0px 20px 0px;
+    margin: 50px 0px 20px 0px;
     border: 5px solid blue;
     background-color: white;
     border-radius: 7.5px;
-    transition: .3s linear;
+    transition: .2s linear;
+    box-shadow: 6px 3px 23px 30px rgba(0,255,242,0.35);
 }
 .stone:hover,
 .scissors:hover,
 .paper:hover{
     background-color: rgb(196, 193, 193);
     border: 5px solid rgb(22, 22, 177);
+    margin: 50px 0px 20px 0px;
+    box-shadow: 6px 3px 23px 30px rgb(1, 253, 241);
 }
