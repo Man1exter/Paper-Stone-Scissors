@@ -66,7 +66,7 @@
     border: 5px solid yellow;
     background-color:rgba(255, 102, 0, 0.945);
 }
-.score{
+/* .score{
     width: 100%;
     background-color: lightblue;
     text-align: center;
@@ -81,15 +81,44 @@
     border-top: 5px solid lightblue;
     border-bottom: 5px solid lightblue;
     background-color: greenyellow;
-}
+} */
 .result{
     display: flex;
     justify-content: space-around;
     font-size: 30px;
     border: 3px solid black;
-    line-height: 265px;
+    line-height: 50px;
     margin: 0px auto;
+    background-color: white;
+}
+.win,
+.draw,
+.lose{
+    border-left: 5px solid blue;
+    border-right: 5px solid blue;
+    padding-left: 150px;
+    padding-right: 150px;
+    background-color: orange;
+    transition: .3s linear;
 }
 h2{
-
+    background-color: orange;
+    transition: .3s linear;
+}
+h2:hover,
+.win:hover, .draw:hover, .lose:hover{
+    background-color: yellow;
+}
+.pkt{
+    display: flex;
+    justify-content: space-around;
+    line-height: 300px;
+    font-size: 200px;
+}
+h3{
+    color: black;
+    transition: .5s linear;
+}
+h3:hover{
+    color: blue;
 }
