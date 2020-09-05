@@ -7,6 +7,8 @@
     width: 500px;
     height: 250px;
     margin: -33px 0px 0px 36.6%;
+    border-left: 7px solid black;
+    border-right: 7px solid black;
 }
 .rect{
     text-align: center;
@@ -54,7 +56,7 @@
     text-align: center;
     margin: 30px 0px 0px 46%;
     cursor: pointer;
-    border: 5px solid orange;
+    border: 5px solid rgb(255, 136, 0);
     border-radius: 8px;
     background-color:yellow;
     padding: 15px;
@@ -63,4 +65,31 @@
 .fight:hover{
     border: 5px solid yellow;
     background-color:rgba(255, 102, 0, 0.945);
+}
+.score{
+    width: 100%;
+    background-color: lightblue;
+    text-align: center;
+    font-size: 40px;
+    text-transform: uppercase;
+    border-top: 5px solid green;
+    border-bottom: 5px solid green;
+    transition: .3s linear;
+    margin: 10px auto;
+}
+.score:hover{
+    border-top: 5px solid lightblue;
+    border-bottom: 5px solid lightblue;
+    background-color: greenyellow;
+}
+.result{
+    display: flex;
+    justify-content: space-around;
+    font-size: 30px;
+    border: 3px solid black;
+    line-height: 265px;
+    margin: 0px auto;
+}
+h2{
+
 }
