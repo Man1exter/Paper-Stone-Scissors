@@ -9,10 +9,10 @@ const game = {
     cpuWays = '',
 }
 
-const ways = [...document.querySelectorAll('.images img')];
+const ways = [...document.querySelectorAll('.images img')]; //every selected images 
 
 function ourWays(){
-
+ game.playerWays = this.dataset.option;
 }
 
 
