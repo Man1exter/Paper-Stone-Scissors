@@ -30,7 +30,7 @@ function randomWayCpu(){
 }
 
 
-function gameResult(player, cpu){
+function wayResult(player, cpu){
     if(player === cpu){
         return 'draw';
     } else if((player === "stone" && cpu === "scissors") || (player === "paper" && cpu === "stone") || (player === "scissors" && cpu === "paper")){
@@ -53,13 +53,13 @@ function gameResult(player, cpu){
 //function settings and move elements and others //function settings and move elements and others
 function publishResult(player, cpu, results){
     
-        document.querySelector("section.pkt .first").textContent = + +gameSum.wins;
-        document.querySelector('[data-summary = "wins"]').textContent = player;
+        document.querySelector("section.pkt .first").textContent = ++gameSum.win;
+        // document.querySelector('[data-summary = "wins"]').textContent = player;
 
-        document.querySelector("section.pkt .second").textContent = + +gameSum.loss;
-        document.querySelector('[data-summary = "losses"]').textContent = cpu;
+        document.querySelector("section.pkt .second").textContent = ++gameSum.loss;
+        // document.querySelector('[data-summary = "losses"]').textContent = cpu;
 
-        document.querySelector("section.pkt .third").textContent = + +gameSum.draw;
+        document.querySelector("section.pkt .third").textContent = ++gameSum.draw;
     
     if(results === "win"){
         document.querySelector("section.pkt .first").textContent = ++gameSum.win;
@@ -77,8 +77,8 @@ function startGame(){
 }
 
 game.cpuWays = randomWayCpu();
-const results = gameResult(game.playerWays, game.cpuWays);
-publishResult(game.playerWays, game.cpuWays, results);
+const gameResult = wayResult(game.playerWays, game.cpuWays);
+publishResult(game.playerWays, game.cpuWays, gameResult);
 }
 
 
