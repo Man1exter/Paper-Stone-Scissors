@@ -22,7 +22,12 @@ function ourWays(){
 }
 
 ways.forEach(way => way.addEventListener("click", ourWays));
+
+
 //first function to options how to use and effect images! :)
+
+
+
 
 function randomWay(){
     return ways[Math.floor(Math.random()*3)].dataset.option;
@@ -41,3 +46,17 @@ document.querySelector(".fight").addEventListener("click", startCPU);
 
 
 // second function who is winner complete check more//
+
+function gameResult(player, cpu){
+    if(player === cpu){
+        return 'draw'
+    } else if((player === "stone" && cpu === "scissors") || (player === "paper" && cpu === "stone") || (player === "scissors" && cpu === "paper")){
+        return 'win'
+    } else {
+        return 'loss'
+    }
+}
+
+
+
+const results = gameResult(game.playerWays, game.cpuWays);
