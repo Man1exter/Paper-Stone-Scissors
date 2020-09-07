@@ -47,7 +47,7 @@
 .scissors:hover,
 .paper:hover{
     background-color: white;
-    border: 5px solid rgb(22, 22, 177);
+    border: 5px solid rgb(18, 18, 196);
     margin: 50px 0px 20px 0px;
     box-shadow: 6px 3px 23px 30px rgb(1, 253, 241);
 }
