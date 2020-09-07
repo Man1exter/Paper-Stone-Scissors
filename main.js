@@ -93,3 +93,6 @@ document.querySelector(".fight").addEventListener("click", startGame);
 // let me close the section game :D;D;D;D;D;D;
 
 
+//complete functions and run this app is already finish
+//lets join and enjoy ! :D
+// ** * ** * * GOOD LUCK HAVE FUN!/////
