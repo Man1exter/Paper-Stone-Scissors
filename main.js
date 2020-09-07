@@ -22,3 +22,4 @@ function ourWays(){
 }
 
 ways.forEach(way => way.addEventListener("click", ourWays));
+//first function to options how to use and effect images! :)
