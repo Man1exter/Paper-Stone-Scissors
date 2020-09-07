@@ -94,8 +94,8 @@
 .win,
 .draw,
 .lose{
-    border-left: 5px solid blue;
-    border-right: 5px solid blue;
+    border-left: 5px solid rgb(6, 6, 248);
+    border-right: 5px solid rgb(6, 6, 243);
     padding-left: 150px;
     padding-right: 150px;
     background-color: orange;
