@@ -53,20 +53,18 @@ function wayResult(player, cpu){
 //function settings and move elements and others //function settings and move elements and others
 function publishResult(player, cpu, results){
     
-        document.querySelector("section.pkt .first").textContent = ++gameSum.win;
+        // document.querySelector("section.pkt .first").textContent = ++gameSum.win;
         // document.querySelector('[data-summary = "wins"]').textContent = player;
 
-        document.querySelector("section.pkt .second").textContent = ++gameSum.loss;
+        // document.querySelector("section.pkt .second").textContent = ++gameSum.loss;
         // document.querySelector('[data-summary = "losses"]').textContent = cpu;
 
-        document.querySelector("section.pkt .third").textContent = ++gameSum.draw;
-    
     if(results === "win"){
-        document.querySelector("section.pkt .first").textContent = ++gameSum.win;
-     } else if(results === "lose") {
-        document.querySelector("section.pkt .second").textContent = ++gameSum.loss;
-          }else{
-           document.querySelector("section.pkt .third").textContent = ++gameSum.draw;
+        document.querySelector('section.pkt h3.first').textContent = ++gameSum.win;
+     } else if(results === "loss") {
+        document.querySelector('section.pkt h3.second').textContent = ++gameSum.loss;
+          } else {
+           document.querySelector('section.pkt h3.third').textContent = ++gameSum.draw;
 }
 }
 
