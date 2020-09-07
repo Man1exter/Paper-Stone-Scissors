@@ -5,6 +5,16 @@ const gameSum = {
 }
 
 const game = {
-    player = '',
-    cpu = '',
+    playerWays = '',
+    cpuWays = '',
 }
+
+const ways = [...document.querySelectorAll('.images img')];
+
+function ourWays(){
+
+}
+
+
+
+ways.forEach(way => way.addEventListener("click", ourWays));
