@@ -60,14 +60,24 @@ function randomWay(){
 
 //function settings and move elements and others //function settings and move elements and others
 function publishResult(player, cpu, results){
-    if(results === "win"){
+    
         document.querySelector("section.pkt .first").textContent = + +gameSum.wins;
-    } else if(results === "loss"){
+        document.querySelector('[data-summary = "wins"').textContent = player;
+
         document.querySelector("section.pkt .second").textContent = + +gameSum.loss;
-    } else{
+        document.querySelector('[data-summary = "losses"').textContent = cpu;
+
         document.querySelector("section.pkt .third").textContent = + +gameSum.draw;
-    }
+    
+    if(results === "win"){
+        document.querySelector("section.pkt .first").textContent = ++gameSum.win;
+     } else if(results === "lose") {
+        document.querySelector("section.pkt .second").textContent = ++gameSum.loss;
+          }else{
+           document.querySelector("section.pkt .third").textContent = ++gameSum.draw;
 }
+}
+
 
 function startGame(){
     if(!game.playerWays) return alert("You made no choice!");
@@ -87,6 +97,7 @@ publishResult(game.playerWays, game.cpuWays, gameResult)
 
 
 ways.forEach(way => way.addEventListener("click", ourWays));
+
 document.querySelector(".fight").addEventListener("click", startGame);
 
 
