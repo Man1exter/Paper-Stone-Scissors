@@ -23,3 +23,20 @@ function ourWays(){
 
 ways.forEach(way => way.addEventListener("click", ourWays));
 //first function to options how to use and effect images! :)
+
+function randomWay(){
+    return ways[Math.floor(Math.random()*3)].dataset.option;
+}
+
+game.cpuWay = randomWay();
+
+
+
+function startCPU(){
+    if(!game.playerWays) return alert("You made no choice!");
+}
+
+
+document.querySelector(".fight").addEventListener("click", startCPU);
+
+
