@@ -40,3 +40,4 @@ function startCPU(){
 document.querySelector(".fight").addEventListener("click", startCPU);
 
 
+// second function who is winner complete check more//
