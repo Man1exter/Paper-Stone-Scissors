@@ -60,3 +60,5 @@ function gameResult(player, cpu){
 
 
 const results = gameResult(game.playerWays, game.cpuWays);
+
+// next funtion complete check more ;0
