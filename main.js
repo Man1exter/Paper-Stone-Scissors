@@ -25,6 +25,9 @@ function ourWays(){
 
 
 //first function to options how to use and effect images! :)
+function randomWayCpu(){
+    return ways[Math.floor(Math.random() * 3)].dataset.option;
+}
 
 
 function gameResult(player, cpu){
@@ -45,27 +48,16 @@ function gameResult(player, cpu){
 
 
 
-
-
-
-
-
-
-
 ////////////////////////////////////////
-
-function randomWay(){
-    return ways[Math.floor(Math.random()*3)].dataset.option;
-}
 
 //function settings and move elements and others //function settings and move elements and others
 function publishResult(player, cpu, results){
     
         document.querySelector("section.pkt .first").textContent = + +gameSum.wins;
-        document.querySelector('[data-summary = "wins"').textContent = player;
+        document.querySelector('[data-summary = "wins"]').textContent = player;
 
         document.querySelector("section.pkt .second").textContent = + +gameSum.loss;
-        document.querySelector('[data-summary = "losses"').textContent = cpu;
+        document.querySelector('[data-summary = "losses"]').textContent = cpu;
 
         document.querySelector("section.pkt .third").textContent = + +gameSum.draw;
     
@@ -80,17 +72,14 @@ function publishResult(player, cpu, results){
 
 
 function startGame(){
-    if(!game.playerWays) return alert("You made no choice!");
+    if(!game.playerWays) {
+    return alert("You made no choice!");
 }
 
-
-
-game.cpuWay = randomWay();
+game.cpuWays = randomWayCpu();
 const results = gameResult(game.playerWays, game.cpuWays);
-publishResult(game.playerWays, game.cpuWays, gameResult)
-
-
-
+publishResult(game.playerWays, game.cpuWays, results);
+}
 
 
 
