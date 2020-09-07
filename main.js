@@ -21,44 +21,77 @@ function ourWays(){
  this.style.backgroundColor = "white";
 }
 
-ways.forEach(way => way.addEventListener("click", ourWays));
+
 
 
 //first function to options how to use and effect images! :)
 
 
-
-
-function randomWay(){
-    return ways[Math.floor(Math.random()*3)].dataset.option;
-}
-
-game.cpuWay = randomWay();
-
-
-
-function startCPU(){
-    if(!game.playerWays) return alert("You made no choice!");
-}
-
-
-document.querySelector(".fight").addEventListener("click", startCPU);
-
-
-// second function who is winner complete check more//
-
 function gameResult(player, cpu){
     if(player === cpu){
-        return 'draw'
+        return 'draw';
     } else if((player === "stone" && cpu === "scissors") || (player === "paper" && cpu === "stone") || (player === "scissors" && cpu === "paper")){
-        return 'win'
+        return 'win';
     } else {
-        return 'loss'
+        return 'loss';
     }
 }
 
 
 
-const results = gameResult(game.playerWays, game.cpuWays);
 
-// next funtion complete check more ;0
+//publish game on table score
+
+
+
+
+
+
+
+
+
+
+
+////////////////////////////////////////
+
+function randomWay(){
+    return ways[Math.floor(Math.random()*3)].dataset.option;
+}
+
+//function settings and move elements and others //function settings and move elements and others
+function publishResult(player, cpu, results){
+    if(results === "win"){
+        document.querySelector("section.pkt .first").textContent = + +gameSum.wins;
+    } else if(results === "loss"){
+        document.querySelector("section.pkt .second").textContent = + +gameSum.loss;
+    } else{
+        document.querySelector("section.pkt .third").textContent = + +gameSum.draw;
+    }
+}
+
+function startGame(){
+    if(!game.playerWays) return alert("You made no choice!");
+}
+
+
+
+game.cpuWay = randomWay();
+const results = gameResult(game.playerWays, game.cpuWays);
+publishResult(game.playerWays, game.cpuWays, gameResult)
+
+
+
+
+
+
+
+
+ways.forEach(way => way.addEventListener("click", ourWays));
+document.querySelector(".fight").addEventListener("click", startGame);
+
+
+
+// second function who is winner complete check more//
+// let me close the section game :D;D;D;D;D;D;
+
+
